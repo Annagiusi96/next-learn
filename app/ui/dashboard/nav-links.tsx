@@ -32,9 +32,12 @@ const pathname = usePathname();
           <Link
             key={link.name}
             href={link.href}
+            // con clsx impostiamo classi condizionali
             className={clsx(
+              //questa è la classe che avrà sempre, indipendetemente dalla condizione o meno
               "flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3",
               {
+                //questa classe verrà applicata solo se la condizione sarà vera
                 'bg-sky-100 text-blue-600': pathname === link.href
               }
             )}
